@@ -1,0 +1,22 @@
+{
+    "name": "Haram Police Beta",
+    "version": "0.1",
+    "manifest_version": 3,
+    "description": "Blocks Haram websites.",
+    "background": {
+      "service_worker": "service_worker.js",
+      "type": "module"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["block.html"],
+        "matches": ["<all_urls>"]
+      }
+    ],    
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback",
+      "declarativeNetRequestWithHostAccess"
+    ],
+    "host_permissions": ["*://*/*"]
+  }
